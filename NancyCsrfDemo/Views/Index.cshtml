@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+    <body>
+        <h1>Welcome to Nancy CSRF Demo, @ViewBag.Name</h1>
+        <form action="/" method="POST">
+            Name:<br/>
+            <input type="text" name="name" value="@ViewBag.Name" />
+            <input type="submit" />
+            @Html.AntiForgeryToken()
+        </form>
+    </body>
+</html>
